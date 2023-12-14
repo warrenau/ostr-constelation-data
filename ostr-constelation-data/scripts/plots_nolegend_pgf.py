@@ -58,8 +58,9 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     #"figure.figsize": figsize(9),     # default fig size of 0.9 textwidth
     "pgf.preamble": "\n".join([ # plots will use this preamble
         r"\usepackage[utf8]{inputenc}",
-        r"\usepackage[TU]{fontenc}",
+        r"\usepackage[T1]{fontenc}",
         r"\usepackage[detect-all]{siunitx}",
+        r"\providecommand{\mathdefault}[1]{}",
         ])
     }
 mpl.rcParams.update(pgf_with_latex)
@@ -76,7 +77,7 @@ plt.grid(visible=True,which='major',axis='both')
 for k in range(len(ostr_positions)):
     plt.plot(cfd_pressure_data.t, cfd_pressure_data.d[:,k], label=cfd_pressure_data.p[k])
 plt.tight_layout()
-plt.savefig('ostr-constelation-data/figures/'+'3e-1mm-poly-rupturedisk_Pressure_nolegend'+'_plot.pgf',transparent=True)
+plt.savefig('ostr-constelation-data/latex/pgf/'+'3e-1mm-poly-rupturedisk_Pressure_nolegend'+'_plot.pgf',transparent=True)
 
 
 
@@ -87,7 +88,7 @@ plt.grid(visible=True,which='major',axis='both')
 for k in range(len(ostr_positions)):
     plt.plot(cfd_density_data.t, cfd_density_data.d[:,k], label=cfd_density_data.p[k])
 plt.tight_layout()
-plt.savefig('ostr-constelation-data/figures/'+'3e-1mm-poly-rupturedisk_Density_nolegend'+'_plot.pgf',transparent=True)
+plt.savefig('ostr-constelation-data/latex/pgf/'+'3e-1mm-poly-rupturedisk_Density_nolegend'+'_plot.pgf',transparent=True)
 
 
 
@@ -98,7 +99,7 @@ plt.grid(visible=True,which='major',axis='both')
 for k in range(len(ostr_positions)):
     plt.plot(cfd_temperature_data.t, cfd_temperature_data.d[:,k], label=cfd_temperature_data.p[k])
 plt.tight_layout()
-plt.savefig('ostr-constelation-data/figures/'+'3e-1mm-poly-rupturedisk_Temperature_nolegend'+'_plot.pgf',transparent=True)
+plt.savefig('ostr-constelation-data/latex/pgf/'+'3e-1mm-poly-rupturedisk_Temperature_nolegend'+'_plot.pgf',transparent=True)
 
 
 
@@ -112,7 +113,7 @@ plt.grid(visible=True,which='major',axis='both')
 for k in range(len(ostr_positions)):
     plt.plot(couple_pressure_data.t, couple_pressure_data.d[:,k], label=couple_pressure_data.p[k])
 plt.tight_layout()
-plt.savefig('ostr-constelation-data/figures/'+'ostr-coupled-3e-1mm-poly_Pressure_nolegend'+'_plot.pgf',transparent=True)
+plt.savefig('ostr-constelation-data/latex/pgf/'+'ostr-coupled-3e-1mm-poly_Pressure_nolegend'+'_plot.pgf',transparent=True)
 
 
 
@@ -123,7 +124,7 @@ plt.grid(visible=True,which='major',axis='both')
 for k in range(len(ostr_positions)):
     plt.plot(couple_density_data.t, couple_density_data.d[:,k], label=couple_density_data.p[k])
 plt.tight_layout()
-plt.savefig('ostr-constelation-data/figures/'+'ostr-coupled-3e-1mm-poly_Density_nolegend'+'_plot.pgf',transparent=True)
+plt.savefig('ostr-constelation-data/latex/pgf/'+'ostr-coupled-3e-1mm-poly_Density_nolegend'+'_plot.pgf',transparent=True)
 
 
 
@@ -134,4 +135,4 @@ plt.grid(visible=True,which='major',axis='both')
 for k in range(len(ostr_positions)):
     plt.plot(couple_temperature_data.t, couple_temperature_data.d[:,k], label=couple_temperature_data.p[k])
 plt.tight_layout()
-plt.savefig('ostr-constelation-data/figures/'+'ostr-coupled-3e-1mm-poly_Temperature_nolegend'+'_plot.pgf',transparent=True)
+plt.savefig('ostr-constelation-data/latex/pgf/'+'ostr-coupled-3e-1mm-poly_Temperature_nolegend'+'_plot.pgf',transparent=True)

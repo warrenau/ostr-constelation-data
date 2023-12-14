@@ -1,0 +1,28 @@
+\documentclass[tikz]{standalone}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+%\providecommand{\mathdefault}[1]{}
+\usepackage{pdflscape} % makes pages landscape
+%\usepackage[labelfont={bf}]{caption}
+\usepackage{siunitx}
+\sisetup{detect-weight=true, detect-family=true} % makes siunitx follow font formatting like bold, italic, etc.
+
+\usepackage{newpxtext,newpxmath}
+
+\begin{document}
+
+\begin{tikzpicture}
+
+    \node[inner sep=0pt] (geom label) at (0,0) {\includegraphics[width=5.75in]{../figures/STAR_new_geometry_colorlabels_tikz.pdf}};
+    \node[inner sep=0pt] (plot) at (0,-6){\input{pgf/ostr-coupled-3e-1mm-poly_Density_nolegend_plot.pgf}};
+    
+
+\end{tikzpicture}
+
+
+
+\end{document}
