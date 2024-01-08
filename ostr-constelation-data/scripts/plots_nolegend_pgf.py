@@ -1,4 +1,4 @@
-import astronomer as astro
+from constelation_astronomer import astronomer as astro
 
 import matplotlib as mpl
 mpl.use('pgf')
