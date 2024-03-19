@@ -86,7 +86,7 @@ plt.grid(visible=True,which='major',axis='both')
 plt.plot(density,rho_05tube,'-b')
 plt.plot(density,rho_0625tube,'-g')
 plt.plot(density,rho_075tube,'-r')
-plt.figlegend(['0.5" tube','0.625" tube','0.75" tube'],bbox_to_anchor=(0.95,0.35))
+plt.figlegend([r'\SI{1.27}{\centi\meter} OD',r'\SI{1.5875}{\centi\meter} OD',r'\SI{1.905}{\centi\meter} OD'],bbox_to_anchor=(0.95,0.35))
 plt.tight_layout()
 plt.savefig('ostr-constelation-data/latex/pgf/reactivity_change_vs_density_plot.pgf',transparent=True)
 
